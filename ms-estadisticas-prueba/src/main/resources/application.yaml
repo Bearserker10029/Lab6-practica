@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ms-estadisticas
+
+server:
+  port: 8020
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.int}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
